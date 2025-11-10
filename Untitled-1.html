@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favour, Will You Be My Girlfriend?</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      color: white;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    button {
+      background-color: white;
+      color: #ff1493;
+      border: none;
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      margin: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff1493;
+      color: white;
+    }
+    .letter, .heart-break {
+      display: none;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+    .heart-break {
+      font-size: 4rem;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hey Favour 💖</h1>
+  <h2>Will you be my girlfriend?</h2>
+
+  <div id="buttons">
+    <button onclick="sayYes()">Yes 💕</button>
+    <button onclick="sayNo()">No 💔</button>
+  </div>
+
+  <div class="letter" id="loveLetter">
+    <h2>My Dearest Favour, 💌</h2>
+    <p>
+      From the moment I met you, my world became brighter and my heart lighter.  
+      Every smile of yours feels like sunshine, and every word you speak feels like music.  
+      I love you deeply, sincerely, and completely.  
+      You make my world a more beautiful place just by being in it.  
+      Thank you for saying yes — I promise to cherish you, always. 💖
+    </p>
+  </div>
+
+  <div class="heart-break" id="brokenHeart">💔💔💔</div>
+
+  <script>
+    function sayYes() {
+      document.getElementById('buttons').style.display = 'none';
+      document.getElementById('loveLetter').style.display = 'block';
+    }
+    function sayNo() {
+      document.getElementById('buttons').style.display = 'none';
+      document.getElementById('brokenHeart').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
